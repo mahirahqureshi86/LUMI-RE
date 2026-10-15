@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | LUMIÈRE</title>
+
+    <meta
+        name="description"
+        content="Contact LUMIÈRE for questions about orders, products, returns and customer care."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Contact CSS -->
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body class="contact-page">
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="header-container">
+
+            <!-- Mobile Menu Button -->
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                type="button"
+                aria-label="Open menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <!-- Logo -->
+            <a href="index.html" class="site-logo">
+
+                <span class="logo-main">
+                    LUMIÈRE
+                </span>
+            </a>
+
+
+            <!-- Desktop Navigation -->
+            <nav
+                class="main-navigation"
+                aria-label="Main Navigation"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="categories.html">
+                    Collections
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="active"
+                >
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+
+                <!-- Search -->
+                <button
+                    class="header-action search-button"
+                    id="searchToggle"
+                    type="button"
+                    aria-label="Search"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <circle
+                            cx="11"
+                            cy="11"
+                            r="7"
+                        ></circle>
+
+                        <path d="M20 20l-4-4"></path>
+                    </svg>
+                </button>
+
+
+                <!-- Wishlist -->
+                <a
+                    href="wishlist.html"
+                    class="header-action wishlist-button"
+                    aria-label="Wishlist"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path d="M20.8 8.7c0 5.2-8.8 10.3-8.8 10.3S3.2 13.9 3.2 8.7C3.2 5.9 5.1 4 7.7 4c1.6 0 3.1.8 4.3 2.1C13.1 4.8 14.7 4 16.3 4c2.6 0 4.5 1.9 4.5 4.7z"></path>
+                    </svg>
+
+                    <span class="wishlist-count">
+                        0
+                    </span>
+
+                </a>
+
+
+                <!-- Cart -->
+                <a
+                    href="cart.html"
+                    class="header-action cart-button"
+                    aria-label="Shopping Cart"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path d="M3 4h2l2.1 10.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 7H6"></path>
+
+                        <circle
+                            cx="10"
+                            cy="20"
+                            r="1.3"
+                        ></circle>
+
+                        <circle
+                            cx="18"
+                            cy="20"
+                            r="1.3"
+                        ></circle>
+                    </svg>
+
+                    <span class="cart-count">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         SEARCH PANEL
+    ====================================================== -->
+
+    <div
+        class="search-panel"
+        id="searchPanel"
+    >
+
+        <div class="search-panel-inner">
+
+            <div class="search-header">
+
+                <span class="search-label">
+                    SEARCH LUMIÈRE
+                </span>
+
+                <button
+                    id="closeSearch"
+                    type="button"
+                    aria-label="Close Search"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="search-input-wrapper">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <circle
+                        cx="11"
+                        cy="11"
+                        r="7"
+                    ></circle>
+
+                    <path d="M20 20l-4-4"></path>
+                </svg>
+
+                <input
+                    type="search"
+                    id="globalSearch"
+                    placeholder="Search dresses, tops, trousers..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <div
+                class="search-suggestions"
+                id="searchSuggestions"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MOBILE NAVIGATION
+    ====================================================== -->
+
+    <div
+        class="mobile-menu-overlay"
+        id="mobileMenuOverlay"
+    ></div>
+
+
+    <aside
+        class="mobile-navigation"
+        id="mobileNavigation"
+        aria-label="Mobile Navigation"
+    >
+
+        <div class="mobile-navigation-header">
+
+            <a
+                href="index.html"
+                class="site-logo"
+            >
+
+                <span class="logo-main">
+                    LUMIÈRE
+                </span>
+
+                <span class="logo-subtitle">
+                    WOMEN'S FASHION
+                </span>
+
+            </a>
+
+
+            <button
+                id="closeMobileMenu"
+                type="button"
+                aria-label="Close Menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="categories.html">
+                Collections
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a
+                href="contact.html"
+                class="active"
+            >
+                Contact
+            </a>
+
+            <a href="wishlist.html">
+                Wishlist
+                <span class="wishlist-count">
+                    0
+                </span>
+            </a>
+
+            <a href="cart.html">
+                Cart
+                <span class="cart-count">
+                    0
+                </span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             CONTACT HERO
+        ================================================== -->
+
+        <section class="contact-hero">
+
+            <div class="contact-hero-content">
+
+                <span class="contact-eyebrow">
+                    WE'D LOVE TO HEAR FROM YOU
+                </span>
+
+                <h1>
+                    Contact Us
+                </h1>
+
+                <p>
+                    Questions, styling advice or simply want to say hello?
+                    Our team is here for you.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONTACT INTRO
+        ================================================== -->
+
+        <section class="contact-introduction">
+
+            <div class="contact-container">
+
+                <div class="contact-intro-content">
+
+                    <span class="section-eyebrow">
+                        LUMIÈRE CUSTOMER CARE
+                    </span>
+
+                    <h2>
+                        Let’s start a conversation.
+                    </h2>
+
+                    <p>
+                        Whether you need help finding the perfect piece,
+                        have a question about your order, or would like
+                        to learn more about LUMIÈRE, we're always happy
+                        to help.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONTACT INFORMATION + FORM
+        ================================================== -->
+
+        <section class="contact-main-section">
+
+            <div class="contact-container">
+
+                <div class="contact-grid">
+
+
+                    <!-- Contact Information -->
+
+                    <div class="contact-information">
+
+                        <span class="section-eyebrow">
+                            GET IN TOUCH
+                        </span>
+
+                        <h2>
+                            We're here to help.
+                        </h2>
+
+                        <p class="contact-info-intro">
+                            Reach out to our customer care team and
+                            we'll get back to you as soon as possible.
+                        </p>
+
+
+                        <!-- Email -->
+
+                        <div class="contact-info-card">
+
+                            <div class="contact-info-icon">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <rect
+                                        x="3"
+                                        y="5"
+                                        width="18"
+                                        height="14"
+                                        rx="1"
+                                    ></rect>
+
+                                    <path
+                                        d="M3 7l9 6 9-6"
+                                    ></path>
+                                </svg>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    EMAIL
+                                </span>
+
+                                <a href="mailto:hello@lumierefashion.com">
+                                    hello@lumierefashion.com
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Phone -->
+
+                        <div class="contact-info-card">
+
+                            <div class="contact-info-icon">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M6.5 3.5l3 2.5-1.8 3.2a13.4 13.4 0 0 0 7.1 7.1l3.2-1.8 2.5 3c.5.6.4 1.5-.2 1.9-1.2.9-2.7 1.3-4.2.9C9.9 18.7 5.3 14.1 3.7 7.9c-.4-1.5 0-3 .9-4.2.4-.6 1.3-.7 1.9-.2z"></path>
+                                </svg>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    CUSTOMER CARE
+                                </span>
+
+                                <a href="tel:+911234567890">
+                                    +91 12345 67890
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Hours -->
+
+                        <div class="contact-info-card">
+
+                            <div class="contact-info-icon">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <circle
+                                        cx="12"
+                                        cy="12"
+                                        r="8"
+                                    ></circle>
+
+                                    <path d="M12 7v5l3 2"></path>
+                                </svg>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    CUSTOMER CARE HOURS
+                                </span>
+
+                                <p>
+                                    Monday – Saturday
+                                    <br>
+                                    10:00 AM – 6:00 PM
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Social -->
+
+                        <div class="contact-social">
+
+                            <span>
+                                FOLLOW LUMIÈRE
+                            </span>
+
+                            <div class="social-links">
+
+                                <a
+                                    href="#"
+                                    aria-label="Instagram"
+                                >
+                                    Instagram
+                                </a>
+
+                                <a
+                                    href="#"
+                                    aria-label="Pinterest"
+                                >
+                                    Pinterest
+                                </a>
+
+                                <a
+                                    href="#"
+                                    aria-label="Facebook"
+                                >
+                                    Facebook
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Contact Form -->
+
+                    <div class="contact-form-wrapper">
+
+                        <div class="contact-form-heading">
+
+                            <span class="section-eyebrow">
+                                SEND A MESSAGE
+                            </span>
+
+                            <h2>
+                                How can we help?
+                            </h2>
+
+                        </div>
+
+
+                        <form
+                            class="contact-form"
+                            id="contactForm"
+                            novalidate
+                        >
+
+
+                            <!-- Name + Email -->
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="contactName">
+                                        Full Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="contactName"
+                                        name="name"
+                                        placeholder="Your name"
+                                        autocomplete="name"
+                                        required
+                                    >
+
+                                    <small
+                                        class="form-error"
+                                        id="contactNameError"
+                                    ></small>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="contactEmail">
+                                        Email Address
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="contactEmail"
+                                        name="email"
+                                        placeholder="your@email.com"
+                                        autocomplete="email"
+                                        required
+                                    >
+
+                                    <small
+                                        class="form-error"
+                                        id="contactEmailError"
+                                    ></small>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Subject -->
+
+                            <div class="form-group">
+
+                                <label for="contactSubject">
+                                    Subject
+                                </label>
+
+                                <select
+                                    id="contactSubject"
+                                    name="subject"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select a subject
+                                    </option>
+
+                                    <option value="order">
+                                        Order Enquiry
+                                    </option>
+
+                                    <option value="product">
+                                        Product Information
+                                    </option>
+
+                                    <option value="return">
+                                        Returns & Exchanges
+                                    </option>
+
+                                    <option value="styling">
+                                        Styling Advice
+                                    </option>
+
+                                    <option value="other">
+                                        Something Else
+                                    </option>
+
+                                </select>
+
+                                <small
+                                    class="form-error"
+                                    id="contactSubjectError"
+                                ></small>
+
+                            </div>
+
+
+                            <!-- Order Number -->
+
+                            <div class="form-group">
+
+                                <label for="contactOrder">
+                                    Order Number
+                                    <span>(Optional)</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="contactOrder"
+                                    name="order"
+                                    placeholder="e.g. LM-10245"
+                                >
+
+                            </div>
+
+
+                            <!-- Message -->
+
+                            <div class="form-group">
+
+                                <label for="contactMessage">
+                                    Message
+                                </label>
+
+                                <textarea
+                                    id="contactMessage"
+                                    name="message"
+                                    rows="6"
+                                    placeholder="Tell us how we can help..."
+                                    required
+                                ></textarea>
+
+                                <small
+                                    class="form-error"
+                                    id="contactMessageError"
+                                ></small>
+
+                            </div>
+
+
+                            <!-- Consent -->
+
+                            <label class="contact-checkbox">
+
+                                <input
+                                    type="checkbox"
+                                    id="contactConsent"
+                                    required
+                                >
+
+                                <span class="custom-checkbox"></span>
+
+                                <span class="checkbox-text">
+                                    I agree to be contacted by the
+                                    LUMIÈRE customer care team regarding
+                                    my enquiry.
+                                </span>
+
+                            </label>
+
+                            <small
+                                class="form-error"
+                                id="contactConsentError"
+                            ></small>
+
+
+                            <!-- Submit -->
+
+                            <button
+                                type="submit"
+                                class="contact-submit"
+                            >
+
+                                <span>
+                                    Send Message
+                                </span>
+
+                                <span class="submit-arrow">
+                                    →
+                                </span>
+
+                            </button>
+
+
+                            <p class="form-note">
+                                We usually respond within 1–2 business days.
+                            </p>
+
+                        </form>
+
+
+                        <!-- Success Message -->
+
+                        <div
+                            class="contact-success"
+                            id="contactSuccess"
+                        >
+
+                            <div class="success-icon">
+                                ✓
+                            </div>
+
+                            <span>
+                                MESSAGE SENT
+                            </span>
+
+                            <h3>
+                                Thank you for reaching out.
+                            </h3>
+
+                            <p>
+                                Your message has been received.
+                                Our customer care team will get back
+                                to you shortly.
+                            </p>
+
+                            <button
+                                type="button"
+                                id="sendAnotherMessage"
+                            >
+                                Send Another Message
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FAQ
+        ================================================== -->
+
+        <section class="contact-faq">
+
+            <div class="contact-container">
+
+                <div class="faq-heading">
+
+                    <span class="section-eyebrow">
+                        NEED QUICK ANSWERS?
+                    </span>
+
+                    <h2>
+                        Frequently Asked Questions
+                    </h2>
+
+                    <p>
+                        Find answers to some of the most common questions
+                        about shopping with LUMIÈRE.
+                    </p>
+
+                </div>
+
+
+                <div class="faq-list">
+
+
+                    <!-- FAQ 1 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            type="button"
+                            class="faq-question"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                How can I track my order?
+                            </span>
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Once your order has been dispatched,
+                                you'll receive an email containing your
+                                tracking information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 2 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            type="button"
+                            class="faq-question"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                Can I return or exchange an item?
+                            </span>
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Yes. Eligible items can be returned or
+                                exchanged according to our return policy.
+                                Please contact customer care for assistance.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 3 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            type="button"
+                            class="faq-question"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                How do I choose the right size?
+                            </span>
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Each product page includes available sizes
+                                and fit information. If you're unsure,
+                                our customer care team can also help.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 4 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            type="button"
+                            class="faq-question"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                Do you offer styling advice?
+                            </span>
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Absolutely. Send us a message with the
+                                occasion or style you're looking for and
+                                we'll be happy to suggest pieces.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 5 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            type="button"
+                            class="faq-question"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                How long does delivery take?
+                            </span>
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Delivery times may vary depending on your
+                                location. Your estimated delivery details
+                                will be provided during checkout.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             NEWSLETTER
+        ================================================== -->
+
+        <section class="newsletter-section">
+
+            <div class="newsletter-container">
+
+                <span class="newsletter-eyebrow">
+                    JOIN LUMIÈRE
+                </span>
+
+                <h2>
+                    Stay in the know.
+                </h2>
+
+                <p>
+                    Subscribe for new arrivals, exclusive edits and
+                    private offers.
+                </p>
+
+
+                <form
+                    class="newsletter-form"
+                    id="newsletterForm"
+                >
+
+                    <input
+                        type="email"
+                        id="newsletterEmail"
+                        placeholder="Your email address"
+                        required
+                    >
+
+                    <button type="submit">
+                        Subscribe
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="site-logo"
+                >
+
+                    <span class="logo-main">
+                        LUMIÈRE
+                    </span>
+
+                    <span class="logo-subtitle">
+                        WOMEN'S FASHION
+                    </span>
+
+                </a>
+
+                <p>
+                    Timeless femininity, refined silhouettes
+                    and modern luxury.
+                </p>
+
+            </div>
+
+
+            <!-- Explore -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Explore
+                </h4>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="categories.html">
+                    Collections
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- Customer Care -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Customer Care
+                </h4>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <a href="cart.html">
+                    Shopping Cart
+                </a>
+
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+                <a href="checkout.html">
+                    Checkout
+                </a>
+
+            </div>
+
+
+            <!-- Follow -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Follow
+                </h4>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Pinterest
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 LUMIÈRE. All rights reserved.
+            </p>
+
+            <div>
+
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        id="toastContainer"
+        class="toast-container"
+    ></div>
+
+
+    <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+    <button
+        id="backToTop"
+        class="back-to-top"
+        type="button"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+
+</body>
+</html>

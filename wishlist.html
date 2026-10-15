@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wishlist | LUMIÈRE</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Wishlist CSS -->
+    <link rel="stylesheet" href="wishlist.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="header-inner">
+
+            <!-- Mobile Menu Button -->
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                aria-label="Open menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+
+                <span class="logo-main">
+                    LUMIÈRE
+                </span>
+
+                <span class="logo-sub">
+                    WOMEN'S FASHION
+                </span>
+
+            </a>
+
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-navigation">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+
+                <!-- Search -->
+                <button
+                    class="header-icon"
+                    id="searchToggle"
+                    aria-label="Search"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="M16.5 16.5L21 21"></path>
+                    </svg>
+                </button>
+
+
+                <!-- Wishlist -->
+                <a
+                    href="wishlist.html"
+                    class="header-icon icon-with-count active-icon"
+                    aria-label="Wishlist"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20.8 8.7c0 5.5-8.8 10.3-8.8 10.3S3.2 14.2 3.2 8.7A4.7 4.7 0 0 1 8 4c1.5 0 2.9.7 4 1.9C13.1 4.7 14.5 4 16 4a4.7 4.7 0 0 1 4.8 4.7Z"></path>
+                    </svg>
+
+                    <span class="wishlist-count">
+                        0
+                    </span>
+                </a>
+
+
+                <!-- Cart -->
+                <a
+                    href="cart.html"
+                    class="header-icon icon-with-count"
+                    aria-label="Shopping bag"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <path d="M6 8h12l1 13H5L6 8Z"></path>
+                        <path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
+                    </svg>
+
+                    <span class="cart-count">
+                        0
+                    </span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MOBILE NAVIGATION
+         ===================================================== -->
+
+    <div
+        class="mobile-navigation"
+        id="mobileNavigation"
+    >
+
+        <button
+            class="mobile-menu-close"
+            id="closeMobileMenu"
+            aria-label="Close menu"
+        >
+            &times;
+        </button>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="categories.html">
+                Categories
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <div
+        class="mobile-menu-overlay"
+        id="mobileMenuOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         SEARCH PANEL
+         ===================================================== -->
+
+    <div
+        class="search-panel"
+        id="searchPanel"
+    >
+
+        <div class="search-panel-inner">
+
+            <button
+                class="search-close"
+                id="closeSearch"
+                aria-label="Close search"
+            >
+                &times;
+            </button>
+
+
+            <div class="search-box">
+
+                <svg viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <path d="M16.5 16.5L21 21"></path>
+                </svg>
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Search our collection..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <div
+                class="search-suggestions"
+                id="searchSuggestions"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN WISHLIST CONTENT
+         ===================================================== -->
+
+    <main class="wishlist-page">
+
+
+        <!-- Page Heading -->
+        <section class="wishlist-hero">
+
+            <div class="wishlist-hero-content">
+
+                <p class="wishlist-eyebrow">
+                    YOUR CURATED EDIT
+                </p>
+
+                <h1>
+                    Wishlist
+                </h1>
+
+                <p>
+                    Save the pieces you love and come back to them
+                    whenever you're ready.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Wishlist Content -->
+        <section class="wishlist-section">
+
+            <div class="wishlist-container">
+
+
+                <!-- Wishlist Header -->
+                <div class="wishlist-heading-row">
+
+                    <div>
+
+                        <p class="section-eyebrow">
+                            LUMIÈRE COLLECTION
+                        </p>
+
+                        <h2>
+                            Your Favorites
+                        </h2>
+
+                    </div>
+
+
+                    <div
+                        class="wishlist-item-count"
+                        id="wishlistItemCount"
+                    >
+                        0 items
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     WISHLIST PRODUCT GRID
+                     ================================================= -->
+
+                <div
+                    class="wishlist-grid"
+                    id="wishlistGrid"
+                >
+
+                    <!--
+                        Products are inserted here by
+                        script.js -> renderWishlistPage()
+                    -->
+
+                </div>
+
+
+                <!-- =================================================
+                     EMPTY WISHLIST
+                     ================================================= -->
+
+                <div
+                    class="wishlist-empty"
+                    id="wishlistEmpty"
+                >
+
+                    <div class="empty-heart">
+
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.8 8.7c0 5.5-8.8 10.3-8.8 10.3S3.2 14.2 3.2 8.7A4.7 4.7 0 0 1 8 4c1.5 0 2.9.7 4 1.9C13.1 4.7 14.5 4 16 4a4.7 4.7 0 0 1 4.8 4.7Z"></path>
+                        </svg>
+
+                    </div>
+
+                    <p class="empty-eyebrow">
+                        YOUR WISHLIST IS EMPTY
+                    </p>
+
+                    <h2>
+                        Nothing saved yet
+                    </h2>
+
+                    <p>
+                        Explore our collection and save the pieces
+                        that speak to you.
+                    </p>
+
+                    <a
+                        href="shop.html"
+                        class="wishlist-shop-button"
+                    >
+                        Explore Collection
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WISHLIST BOTTOM BANNER
+             ===================================================== -->
+
+        <section class="wishlist-banner">
+
+            <div class="wishlist-banner-content">
+
+                <p class="section-eyebrow">
+                    LUMIÈRE
+                </p>
+
+                <h2>
+                    Elegance, saved for later.
+                </h2>
+
+                <a
+                    href="shop.html"
+                    class="wishlist-banner-link"
+                >
+                    Continue Shopping
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+
+            <!-- Brand -->
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+                    LUMIÈRE
+                </a>
+
+                <p>
+                    Timeless fashion for the modern woman.
+                    Designed with elegance, confidence and individuality.
+                </p>
+
+            </div>
+
+
+            <!-- Shop -->
+            <div class="footer-column">
+
+                <h4>
+                    Shop
+                </h4>
+
+                <a href="shop.html">
+                    All Products
+                </a>
+
+                <a href="shop.html?category=dresses">
+                    Dresses
+                </a>
+
+                <a href="shop.html?category=tops">
+                    Tops
+                </a>
+
+                <a href="shop.html?category=bottoms">
+                    Bottoms
+                </a>
+
+                <a href="shop.html?category=outerwear">
+                    Outerwear
+                </a>
+
+            </div>
+
+
+            <!-- About -->
+            <div class="footer-column">
+
+                <h4>
+                    About
+                </h4>
+
+                <a href="about.html">
+                    Our Story
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- Customer Care -->
+            <div class="footer-column">
+
+                <h4>
+                    Customer Care
+                </h4>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <a href="cart.html">
+                    Shopping Bag
+                </a>
+
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 LUMIÈRE. All rights reserved.
+            </p>
+
+            <p>
+                Designed with elegance.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         BACK TO TOP
+         ===================================================== -->
+
+    <button
+        id="backToTop"
+        class="back-to-top"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <!-- Main JS MUST load first -->
+    <script src="script.js"></script>
+
+    <!-- Wishlist JS -->
+    <script src="wishlist.js"></script>
+
+</body>
+</html>

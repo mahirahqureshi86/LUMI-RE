@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop | LUMIÈRE</title>
+
+    <meta
+        name="description"
+        content="Explore the complete LUMIÈRE women's fashion collection."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main Website CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Shop Page CSS -->
+    <link rel="stylesheet" href="shop.css">
+</head>
+
+<body class="shop-page">
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="header-container">
+
+            <!-- Mobile Menu Button -->
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                type="button"
+                aria-label="Open menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Logo -->
+            <a href="index.html" class="site-logo">
+                LUMIÈRE
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="main-navigation">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html" class="active">
+                    Shop
+                </a>
+
+                <a href="categories.html">
+                    Collections
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+
+                <!-- Search -->
+                <button
+                    type="button"
+                    class="header-action"
+                    id="searchToggle"
+                    aria-label="Search"
+                >
+                    <span>⌕</span>
+                </button>
+
+                <!-- Wishlist -->
+                <a
+                    href="wishlist.html"
+                    class="header-action header-wishlist"
+                    aria-label="Wishlist"
+                >
+                    <span>♡</span>
+                    <span
+                        class="wishlist-count"
+                        id="wishlistCount"
+                    >0</span>
+                </a>
+
+                <!-- Cart -->
+                <a
+                    href="cart.html"
+                    class="header-action header-cart"
+                    aria-label="Shopping cart"
+                >
+                    <span>🛒</span>
+                    <span
+                        class="cart-count"
+                        id="cartCount"
+                    >0</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         SEARCH PANEL
+         ===================================================== -->
+
+    <div class="search-panel" id="searchPanel">
+
+        <div class="search-panel-inner">
+
+            <button
+                type="button"
+                class="close-search"
+                id="closeSearch"
+                aria-label="Close search"
+            >
+                ×
+            </button>
+
+            <div class="search-box">
+
+                <input
+                    type="search"
+                    id="globalSearch"
+                    placeholder="Search dresses, tops, bags..."
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    id="globalSearchButton"
+                    aria-label="Search"
+                >
+                    ⌕
+                </button>
+
+            </div>
+
+            <div
+                class="search-suggestions"
+                id="searchSuggestions"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MOBILE NAVIGATION
+         ===================================================== -->
+
+    <div
+        class="mobile-menu-overlay"
+        id="mobileMenuOverlay"
+    ></div>
+
+    <aside
+        class="mobile-navigation"
+        id="mobileNavigation"
+    >
+
+        <div class="mobile-navigation-header">
+
+            <a href="index.html" class="site-logo">
+                LUMIÈRE
+            </a>
+
+            <button
+                type="button"
+                id="closeMobileMenu"
+                aria-label="Close menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="categories.html">
+                Collections
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="wishlist.html">
+                Wishlist
+            </a>
+
+            <a href="cart.html">
+                Cart
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- =====================================================
+         SHOP HERO
+         ===================================================== -->
+
+    <section class="shop-hero">
+
+        <div class="shop-hero-content">
+
+            <p class="shop-hero-subtitle">
+                The LUMIÈRE Edit
+            </p>
+
+            <h1>
+                Shop
+            </h1>
+
+            <p>
+                Discover thoughtfully designed pieces made for
+                effortless elegance, timeless style and everyday
+                confidence.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SHOP MAIN
+         ===================================================== -->
+
+    <main class="shop-container">
+
+        <!-- Mobile Filter Button -->
+        <button
+            type="button"
+            class="mobile-filter-button"
+        >
+            ☰ &nbsp; Filters
+        </button>
+
+
+        <div class="shop-layout">
+
+
+            <!-- =================================================
+                 SIDEBAR FILTERS
+                 ================================================= -->
+
+            <aside class="shop-sidebar">
+
+                <div class="filter-heading">
+
+                    <h3>
+                        Filters
+                    </h3>
+
+                    <button
+                        type="button"
+                        class="filter-clear"
+                    >
+                        Clear All
+                    </button>
+
+                </div>
+
+
+                <!-- CATEGORY -->
+
+                <div class="filter-group">
+
+                    <h4>
+                        Category
+                    </h4>
+
+                    <div class="category-filter-list">
+
+                        <div class="category-filter-item">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="all"
+                                    data-category-filter
+                                    checked
+                                >
+
+                                <span>
+                                    All Products
+                                </span>
+                            </label>
+
+                        </div>
+
+
+                        <div class="category-filter-item">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="dresses"
+                                    data-category-filter
+                                >
+
+                                <span>
+                                    Dresses
+                                </span>
+                            </label>
+
+                            <span data-category-count="dresses">
+                                0
+                            </span>
+
+                        </div>
+
+
+                        <div class="category-filter-item">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="tops"
+                                    data-category-filter
+                                >
+
+                                <span>
+                                    Tops
+                                </span>
+                            </label>
+
+                            <span data-category-count="tops">
+                                0
+                            </span>
+
+                        </div>
+
+
+                        <div class="category-filter-item">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="bottoms"
+                                    data-category-filter
+                                >
+
+                                <span>
+                                    Bottoms
+                                </span>
+                            </label>
+
+                            <span data-category-count="bottoms">
+                                0
+                            </span>
+
+                        </div>
+
+
+                        <div class="category-filter-item">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="outerwear"
+                                    data-category-filter
+                                >
+
+                                <span>
+                                    Outerwear
+                                </span>
+                            </label>
+
+                            <span data-category-count="outerwear">
+                                0
+                            </span>
+
+                        </div>
+
+
+                        <div class="category-filter-item">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="accessories"
+                                    data-category-filter
+                                >
+
+                                <span>
+                                    Accessories
+                                </span>
+                            </label>
+
+                            <span data-category-count="accessories">
+                                0
+                            </span>
+
+                        </div>
+
+
+                        <div class="category-filter-item">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="shoes"
+                                    data-category-filter
+                                >
+
+                                <span>
+                                    Shoes
+                                </span>
+                            </label>
+
+                            <span data-category-count="shoes">
+                                0
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRICE -->
+
+                <div class="filter-group">
+
+                    <h4>
+                        Price
+                    </h4>
+
+                    <div class="price-inputs">
+
+                        <div class="price-input-group">
+
+                            <span>
+                                ₹
+                            </span>
+
+                            <input
+                                type="number"
+                                id="minPrice"
+                                placeholder="Min"
+                                min="0"
+                            >
+
+                        </div>
+
+
+                        <div class="price-input-group">
+
+                            <span>
+                                ₹
+                            </span>
+
+                            <input
+                                type="number"
+                                id="maxPrice"
+                                placeholder="Max"
+                                min="0"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COLLECTION -->
+
+                <div class="filter-group">
+
+                    <h4>
+                        Collection
+                    </h4>
+
+                    <div class="category-filter-list">
+
+                        <div class="category-filter-item">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="collection"
+                                    value="all"
+                                    checked
+                                >
+
+                                <span>
+                                    Latest Edit
+                                </span>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+            <!-- =================================================
+                 SHOP CONTENT
+                 ================================================= -->
+
+            <section class="shop-content">
+
+
+                <!-- TOOLBAR -->
+
+                <div class="shop-toolbar">
+
+                    <p
+                        class="shop-result-count"
+                        data-shop-result-count
+                    >
+                        0 pieces
+                    </p>
+
+
+                    <div class="shop-toolbar-right">
+
+                        <!-- Shop Search -->
+
+                        <div class="shop-search-box">
+
+                            <input
+                                type="search"
+                                id="shopSearch"
+                                placeholder="Search products..."
+                                autocomplete="off"
+                            >
+
+                            <button
+                                type="button"
+                                aria-label="Search products"
+                            >
+                                ⌕
+                            </button>
+
+                        </div>
+
+
+                        <!-- Sort -->
+
+                        <select
+                            id="shopSort"
+                            class="shop-sort"
+                            aria-label="Sort products"
+                        >
+
+                            <option value="featured">
+                                Featured
+                            </option>
+
+                            <option value="newest">
+                                Newest
+                            </option>
+
+                            <option value="price-low">
+                                Price: Low to High
+                            </option>
+
+                            <option value="price-high">
+                                Price: High to Low
+                            </option>
+
+                            <option value="rating">
+                                Top Rated
+                            </option>
+
+                            <option value="discount">
+                                Best Discount
+                            </option>
+
+                            <option value="name">
+                                Name: A to Z
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     PRODUCT GRID
+
+                     shop.js will automatically insert products here
+                     ================================================= -->
+
+                <div
+                    class="shop-product-grid"
+                    id="shopProductGrid"
+                >
+
+                    <div class="shop-loading">
+                        Loading collection...
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     PAGINATION
+                     ================================================= -->
+
+                <div
+                    class="shop-pagination"
+                    aria-label="Shop pagination"
+                >
+
+                    <button
+                        type="button"
+                        class="active"
+                    >
+                        1
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         NEWSLETTER
+         ===================================================== -->
+
+    <section class="newsletter-section">
+
+        <div class="newsletter-content">
+
+            <p class="section-eyebrow">
+                Stay in the LUMIÈRE world
+            </p>
+
+            <h2>
+                Something beautiful is on its way.
+            </h2>
+
+            <p>
+                Subscribe for new collections, private edits and
+                exclusive offers.
+            </p>
+
+            <form
+                class="newsletter-form"
+                id="newsletterForm"
+            >
+
+                <input
+                    type="email"
+                    id="newsletterEmail"
+                    placeholder="Your email address"
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-column footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+                    LUMIÈRE
+                </a>
+
+                <p>
+                    Modern femininity, thoughtfully designed.
+                    Discover timeless pieces made for your
+                    everyday wardrobe.
+                </p>
+
+            </div>
+
+
+            <!-- SHOP -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Shop
+                </h4>
+
+                <a href="shop.html">
+                    All Products
+                </a>
+
+                <a href="categories.html">
+                    Collections
+                </a>
+
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+            </div>
+
+
+            <!-- COMPANY -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Company
+                </h4>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="#">
+                    Shipping & Returns
+                </a>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+
+            <!-- SOCIAL -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Follow Us
+                </h4>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Pinterest
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 LUMIÈRE. All rights reserved.
+            </p>
+
+            <p>
+                Designed with elegance.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         TOAST
+         ===================================================== -->
+
+    <div
+        class="toast-container"
+        id="toastContainer"
+    ></div>
+
+
+    <!-- =====================================================
+         BACK TO TOP
+         ===================================================== -->
+
+    <button
+        type="button"
+        class="back-to-top"
+        id="backToTop"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <!-- Main Website JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Shop Page JavaScript -->
+    <script src="shop.js"></script>
+
+</body>
+</html>

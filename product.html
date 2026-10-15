@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product | LUMIÈRE</title>
+
+    <meta
+        name="description"
+        content="Discover beautifully designed women's fashion from LUMIÈRE."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Product CSS -->
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body class="product-page">
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="header-container">
+
+            <!-- Mobile Menu -->
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                type="button"
+                aria-label="Open menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Logo -->
+            <a href="index.html" class="site-logo">
+                LUMIÈRE
+            </a>
+
+            <!-- Navigation -->
+            <nav class="main-navigation">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="categories.html">
+                    Collections
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+
+                <button
+                    type="button"
+                    class="header-action"
+                    id="searchToggle"
+                    aria-label="Search"
+                >
+                    ⌕
+                </button>
+
+                <a
+                    href="wishlist.html"
+                    class="header-action header-wishlist"
+                    aria-label="Wishlist"
+                >
+                    ♡
+                    <span class="wishlist-count">
+                        0
+                    </span>
+                </a>
+
+                <a
+                    href="cart.html"
+                    class="header-action header-cart"
+                    aria-label="Cart"
+                >
+                    🛒
+                    <span class="cart-count">
+                        0
+                    </span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         SEARCH PANEL
+         ===================================================== -->
+
+    <div
+        class="search-panel"
+        id="searchPanel"
+    >
+
+        <div class="search-panel-inner">
+
+            <button
+                type="button"
+                class="close-search"
+                id="closeSearch"
+                aria-label="Close search"
+            >
+                ×
+            </button>
+
+            <div class="search-box">
+
+                <input
+                    type="search"
+                    id="globalSearch"
+                    placeholder="Search dresses, tops, bags..."
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    aria-label="Search"
+                >
+                    ⌕
+                </button>
+
+            </div>
+
+            <div
+                class="search-suggestions"
+                id="searchSuggestions"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MOBILE NAVIGATION
+         ===================================================== -->
+
+    <div
+        class="mobile-menu-overlay"
+        id="mobileMenuOverlay"
+    ></div>
+
+    <aside
+        class="mobile-navigation"
+        id="mobileNavigation"
+    >
+
+        <div class="mobile-navigation-header">
+
+            <a
+                href="index.html"
+                class="site-logo"
+            >
+                LUMIÈRE
+            </a>
+
+            <button
+                type="button"
+                id="closeMobileMenu"
+                aria-label="Close menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="categories.html">
+                Collections
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="wishlist.html">
+                Wishlist
+            </a>
+
+            <a href="cart.html">
+                Cart
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- =====================================================
+         BREADCRUMB
+         ===================================================== -->
+
+    <div class="product-breadcrumb-container">
+
+        <div class="product-breadcrumb">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <span>
+                /
+            </span>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <span>
+                /
+            </span>
+
+            <span>
+                Product
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         PRODUCT DETAILS
+         ===================================================== -->
+
+    <main class="product-main">
+
+        <div
+            class="product-details"
+            id="productDetails"
+        >
+
+            <!-- product.js will render the complete product here -->
+
+            <div class="product-loading">
+                <div class="product-loading-spinner"></div>
+
+                <p>
+                    Loading product...
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         RELATED PRODUCTS
+         ===================================================== -->
+
+    <section class="related-products-section">
+
+        <div class="section-heading">
+
+            <p class="section-eyebrow">
+                You may also like
+            </p>
+
+            <h2>
+                Complete the Look
+            </h2>
+
+            <p>
+                Discover more pieces from the same LUMIÈRE collection.
+            </p>
+
+        </div>
+
+        <div
+            class="related-products-grid"
+            id="relatedProducts"
+        >
+            <!-- product.js inserts related products -->
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         NEWSLETTER
+         ===================================================== -->
+
+    <section class="newsletter-section">
+
+        <div class="newsletter-content">
+
+            <p class="section-eyebrow">
+                Stay in the LUMIÈRE world
+            </p>
+
+            <h2>
+                Something beautiful is on its way.
+            </h2>
+
+            <p>
+                Subscribe for new collections, private edits and
+                exclusive offers.
+            </p>
+
+            <form
+                class="newsletter-form"
+                id="newsletterForm"
+            >
+
+                <input
+                    type="email"
+                    id="newsletterEmail"
+                    placeholder="Your email address"
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-column footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+                    LUMIÈRE
+                </a>
+
+                <p>
+                    Modern femininity, thoughtfully designed.
+                    Discover timeless pieces made for your
+                    everyday wardrobe.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Shop
+                </h4>
+
+                <a href="shop.html">
+                    All Products
+                </a>
+
+                <a href="categories.html">
+                    Collections
+                </a>
+
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Company
+                </h4>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="#">
+                    Shipping & Returns
+                </a>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Follow Us
+                </h4>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Pinterest
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 LUMIÈRE. All rights reserved.
+            </p>
+
+            <p>
+                Designed with elegance.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         TOAST
+         ===================================================== -->
+
+    <div
+        class="toast-container"
+        id="toastContainer"
+    ></div>
+
+
+    <!-- =====================================================
+         BACK TO TOP
+         ===================================================== -->
+
+    <button
+        type="button"
+        class="back-to-top"
+        id="backToTop"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="script.js"></script>
+    <script src="product.js"></script>
+
+</body>
+</html>

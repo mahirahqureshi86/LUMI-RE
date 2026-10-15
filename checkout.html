@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | LUMIÈRE</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Checkout CSS -->
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="header-inner">
+
+            <!-- Mobile Menu -->
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                aria-label="Open menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <span class="logo-main">LUMIÈRE</span>
+                <span class="logo-sub">WOMEN'S FASHION</span>
+            </a>
+
+
+            <!-- Navigation -->
+            <nav class="desktop-navigation">
+
+                <a href="index.html">Home</a>
+
+                <a href="shop.html">Shop</a>
+
+                <a href="categories.html">Categories</a>
+
+                <a href="about.html">About</a>
+
+                <a href="contact.html">Contact</a>
+
+            </nav>
+
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+
+                <!-- Search -->
+                <button
+                    class="header-icon"
+                    id="searchToggle"
+                    aria-label="Search"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="M16.5 16.5L21 21"></path>
+                    </svg>
+                </button>
+
+
+                <!-- Wishlist -->
+                <a
+                    href="wishlist.html"
+                    class="header-icon icon-with-count"
+                    aria-label="Wishlist"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20.8 8.7c0 5.5-8.8 10.3-8.8 10.3S3.2 14.2 3.2 8.7A4.7 4.7 0 0 1 8 4c1.5 0 2.9.7 4 1.9C13.1 4.7 14.5 4 16 4a4.7 4.7 0 0 1 4.8 4.7Z"></path>
+                    </svg>
+
+                    <span class="wishlist-count">0</span>
+                </a>
+
+
+                <!-- Cart -->
+                <a
+                    href="cart.html"
+                    class="header-icon icon-with-count"
+                    aria-label="Shopping bag"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <path d="M6 8h12l1 13H5L6 8Z"></path>
+                        <path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
+                    </svg>
+
+                    <span class="cart-count">0</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MOBILE NAVIGATION
+         ===================================================== -->
+
+    <div class="mobile-navigation" id="mobileNavigation">
+
+        <button
+            class="mobile-menu-close"
+            id="closeMobileMenu"
+            aria-label="Close menu"
+        >
+            &times;
+        </button>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="shop.html">Shop</a>
+
+            <a href="categories.html">Categories</a>
+
+            <a href="about.html">About</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </div>
+
+
+    <div
+        class="mobile-menu-overlay"
+        id="mobileMenuOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         SEARCH PANEL
+         ===================================================== -->
+
+    <div class="search-panel" id="searchPanel">
+
+        <div class="search-panel-inner">
+
+            <button
+                class="search-close"
+                id="closeSearch"
+                aria-label="Close search"
+            >
+                &times;
+            </button>
+
+
+            <div class="search-box">
+
+                <svg viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <path d="M16.5 16.5L21 21"></path>
+                </svg>
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Search our collection..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <div
+                class="search-suggestions"
+                id="searchSuggestions"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         CHECKOUT PAGE
+         ===================================================== -->
+
+    <main class="checkout-page">
+
+
+        <!-- Page Heading -->
+        <section class="checkout-heading">
+
+            <p class="checkout-eyebrow">
+                LUMIÈRE
+            </p>
+
+            <h1>Checkout</h1>
+
+            <p>
+                Complete your order and prepare for something beautiful.
+            </p>
+
+        </section>
+
+
+        <!-- Checkout Layout -->
+        <section class="checkout-section">
+
+            <div class="checkout-container">
+
+
+                <!-- =================================================
+                     LEFT SIDE - CUSTOMER INFORMATION
+                     ================================================= -->
+
+                <div class="checkout-form-wrapper">
+
+                    <div class="checkout-section-title">
+
+                        <span class="checkout-number">
+                            01
+                        </span>
+
+                        <div>
+                            <h2>Contact Information</h2>
+
+                            <p>
+                                Enter your details for order updates.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <form id="checkoutForm">
+
+
+                        <!-- Contact -->
+                        <div class="form-group">
+
+                            <label for="checkoutEmail">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="checkoutEmail"
+                                name="email"
+                                placeholder="your@email.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Shipping Heading -->
+                        <div class="checkout-section-title form-heading">
+
+                            <span class="checkout-number">
+                                02
+                            </span>
+
+                            <div>
+                                <h2>Shipping Address</h2>
+
+                                <p>
+                                    Where should we deliver your order?
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Name Row -->
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="firstName">
+                                    First Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    name="firstName"
+                                    placeholder="First name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="lastName">
+                                    Last Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    name="lastName"
+                                    placeholder="Last name"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Address -->
+                        <div class="form-group">
+
+                            <label for="address">
+                                Address
+                            </label>
+
+                            <input
+                                type="text"
+                                id="address"
+                                name="address"
+                                placeholder="Street address"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Apartment -->
+                        <div class="form-group">
+
+                            <label for="apartment">
+                                Apartment, Suite, etc.
+                                <span>(optional)</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="apartment"
+                                name="apartment"
+                                placeholder="Apartment, suite, unit..."
+                            >
+
+                        </div>
+
+
+                        <!-- City / State -->
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="city">
+                                    City
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="city"
+                                    name="city"
+                                    placeholder="City"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="state">
+                                    State
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="state"
+                                    name="state"
+                                    placeholder="State"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PIN / Phone -->
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="postalCode">
+                                    PIN Code
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="postalCode"
+                                    name="postalCode"
+                                    placeholder="PIN Code"
+                                    inputmode="numeric"
+                                    maxlength="6"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Phone
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="Phone number"
+                                    inputmode="tel"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Payment Heading -->
+                        <div class="checkout-section-title form-heading">
+
+                            <span class="checkout-number">
+                                03
+                            </span>
+
+                            <div>
+                                <h2>Payment</h2>
+
+                                <p>
+                                    Choose your preferred payment method.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Payment Methods -->
+                        <div class="payment-methods">
+
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="card"
+                                    checked
+                                >
+
+                                <span class="custom-radio"></span>
+
+                                <span class="payment-info">
+
+                                    <strong>
+                                        Card Payment
+                                    </strong>
+
+                                    <small>
+                                        Credit or debit card
+                                    </small>
+
+                                </span>
+
+                                <span class="payment-icons">
+                                    VISA
+                                </span>
+
+                            </label>
+
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="upi"
+                                >
+
+                                <span class="custom-radio"></span>
+
+                                <span class="payment-info">
+
+                                    <strong>
+                                        UPI
+                                    </strong>
+
+                                    <small>
+                                        Pay securely with UPI
+                                    </small>
+
+                                </span>
+
+                                <span class="payment-icons">
+                                    UPI
+                                </span>
+
+                            </label>
+
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="cod"
+                                >
+
+                                <span class="custom-radio"></span>
+
+                                <span class="payment-info">
+
+                                    <strong>
+                                        Cash on Delivery
+                                    </strong>
+
+                                    <small>
+                                        Pay when your order arrives
+                                    </small>
+
+                                </span>
+
+                                <span class="payment-icons">
+                                    COD
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Demo Notice -->
+                        <div class="checkout-notice">
+
+                            <span class="notice-icon">
+                                ✓
+                            </span>
+
+                            <p>
+                                This is a demo checkout for the LUMIÈRE
+                                website. No real payment will be processed.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Submit -->
+                        <button
+                            type="submit"
+                            class="place-order-btn"
+                        >
+                            <span>Place Order</span>
+                            <span>→</span>
+                        </button>
+
+
+                        <p class="secure-checkout">
+                            🔒 Secure checkout · Your information is protected
+                        </p>
+
+                    </form>
+
+                </div>
+
+
+                <!-- =================================================
+                     RIGHT SIDE - ORDER SUMMARY
+                     ================================================= -->
+
+                <aside class="checkout-summary">
+
+
+                    <div class="summary-header">
+
+                        <p>
+                            YOUR ORDER
+                        </p>
+
+                        <h2>
+                            Order Summary
+                        </h2>
+
+                    </div>
+
+
+                    <!-- Products -->
+                    <div
+                        class="checkout-items"
+                        id="checkoutItems"
+                    >
+                        <!-- Filled by script.js -->
+                    </div>
+
+
+                    <!-- Summary Totals -->
+                    <div class="summary-prices">
+
+                        <div class="summary-row">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <strong id="checkoutSubtotal">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Shipping
+                            </span>
+
+                            <strong id="checkoutShipping">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-divider"></div>
+
+
+                        <div class="summary-row summary-total">
+
+                            <span>
+                                Total
+                            </span>
+
+                            <strong id="checkoutTotal">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Benefits -->
+                    <div class="checkout-benefits">
+
+                        <div class="benefit">
+
+                            <span>✦</span>
+
+                            <div>
+                                <strong>
+                                    Complimentary Shipping
+                                </strong>
+
+                                <p>
+                                    On qualifying orders
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="benefit">
+
+                            <span>✦</span>
+
+                            <div>
+                                <strong>
+                                    Easy Returns
+                                </strong>
+
+                                <p>
+                                    Simple and convenient
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="benefit">
+
+                            <span>✦</span>
+
+                            <div>
+                                <strong>
+                                    LUMIÈRE Quality
+                                </strong>
+
+                                <p>
+                                    Carefully selected pieces
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="cart.html"
+                        class="back-to-cart"
+                    >
+                        ← Return to Shopping Bag
+                    </a>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+                    LUMIÈRE
+                </a>
+
+                <p>
+                    Timeless fashion for the modern woman.
+                    Designed with elegance, confidence and individuality.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Shop</h4>
+
+                <a href="shop.html">
+                    All Products
+                </a>
+
+                <a href="shop.html?category=dresses">
+                    Dresses
+                </a>
+
+                <a href="shop.html?category=tops">
+                    Tops
+                </a>
+
+                <a href="shop.html?category=bottoms">
+                    Bottoms
+                </a>
+
+                <a href="shop.html?category=outerwear">
+                    Outerwear
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>About</h4>
+
+                <a href="about.html">
+                    Our Story
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Customer Care</h4>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <a href="cart.html">
+                    Shopping Bag
+                </a>
+
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 LUMIÈRE. All rights reserved.
+            </p>
+
+            <p>
+                Designed with elegance.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Back To Top -->
+    <button
+        id="backToTop"
+        class="back-to-top"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <!-- Main JS MUST come first -->
+    <script src="script.js"></script>
+
+    <!-- Checkout JS -->
+    <script src="checkout.js"></script>
+
+</body>
+</html>

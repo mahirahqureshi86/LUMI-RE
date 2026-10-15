@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Categories | LUMIÈRE</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main Website CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Categories CSS -->
+    <link rel="stylesheet" href="categories.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header" id="siteHeader">
+
+        <div class="header-inner">
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <span class="logo-main">LUMIÈRE</span>
+                <span class="logo-sub">WOMEN'S FASHION</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-navigation">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="categories.html" class="active">Categories</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+
+                <!-- Search -->
+                <button class="header-icon" id="searchToggle" aria-label="Search">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="M16.5 16.5L21 21"></path>
+                    </svg>
+                </button>
+
+                <!-- Wishlist -->
+                <a href="wishlist.html" class="header-icon icon-with-count" aria-label="Wishlist">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.8 8.7c0 5.5-8.8 10.3-8.8 10.3S3.2 14.2 3.2 8.7A4.7 4.7 0 0 1 8 4c1.5 0 2.9.7 4 1.9C13.1 4.7 14.5 4 16 4a4.7 4.7 0 0 1 4.8 4.7Z"></path>
+                    </svg>
+                    <span class="wishlist-count">0</span>
+                </a>
+
+                <!-- Cart -->
+                <a href="cart.html" class="header-icon icon-with-count" aria-label="Shopping bag">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 8h12l1 13H5L6 8Z"></path>
+                        <path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ================= MOBILE NAVIGATION ================= -->
+    <div class="mobile-navigation" id="mobileNavigation">
+
+        <button class="mobile-menu-close" id="closeMobileMenu" aria-label="Close menu">
+            &times;
+        </button>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="categories.html" class="active">Categories</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+
+    <!-- ================= SEARCH PANEL ================= -->
+    <div class="search-panel" id="searchPanel">
+
+        <div class="search-panel-inner">
+
+            <button class="search-close" id="closeSearch" aria-label="Close search">
+                &times;
+            </button>
+
+            <div class="search-box">
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <path d="M16.5 16.5L21 21"></path>
+                </svg>
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Search our collection..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+            <div class="search-suggestions" id="searchSuggestions"></div>
+
+        </div>
+    </div>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- Page Hero -->
+        <section class="categories-hero">
+
+            <div class="categories-hero-content">
+
+                <p class="eyebrow">THE LUMIÈRE COLLECTION</p>
+
+                <h1>Shop by Category</h1>
+
+                <p>
+                    Discover thoughtfully curated pieces designed to bring
+                    effortless elegance to every moment.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Category Introduction -->
+        <section class="category-intro">
+
+            <p class="section-eyebrow">EXPLORE OUR COLLECTION</p>
+
+            <h2>Find Your Style</h2>
+
+            <p class="category-intro-text">
+                From timeless dresses to sophisticated tailoring, explore
+                the collections that define the LUMIÈRE woman.
+            </p>
+
+        </section>
+
+
+        <!-- ================= CATEGORY GRID ================= -->
+        <section class="categories-section">
+
+            <div class="categories-grid">
+
+                <!-- Dresses -->
+                <a
+                    href="shop.html?category=dresses"
+                    class="category-card category-card-large"
+                    data-category-filter="dresses"
+                >
+
+                    <div class="category-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1200&q=85"
+                            alt="Dresses collection"
+                        >
+                    </div>
+
+                    <div class="category-overlay"></div>
+
+                    <div class="category-content">
+
+                        <span class="category-number">01</span>
+
+                        <h3>Dresses</h3>
+
+                        <p>
+                            Elegant silhouettes for every occasion
+                        </p>
+
+                        <span class="category-link">
+                            Explore Collection
+                            <span>→</span>
+                        </span>
+
+                        <span
+                            class="category-count"
+                            data-category-count="dresses"
+                        >
+                            0 Pieces
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- Tops -->
+                <a
+                    href="shop.html?category=tops"
+                    class="category-card"
+                    data-category-filter="tops"
+                >
+
+                    <div class="category-image">
+                        <img
+                            src="https://images.openai.com/static-rsc-4/hAJSt5F97w-Ux39zL1TYGYlGSAyM9a9I70iuSLLuWiPelbo_xl-UufSrhZF43VgdU19iLrkjcZtEplsva2WkhzG4-eNK9sHa7M7z4I17rL1RTzWwtUkMmzzO4OzDCp1yhb8q2YsLqGjZleTYD7rmNww1ZXSWU0UWziAbb_ZiLGHYrVqLInRO58vRHAB4mn8z?purpose=fullsize"
+                            alt="Tops collection"
+                        >
+                    </div>
+
+                    <div class="category-overlay"></div>
+
+                    <div class="category-content">
+
+                        <span class="category-number">02</span>
+
+                        <h3>Tops</h3>
+
+                        <p>
+                            Refined essentials with a modern touch
+                        </p>
+
+                        <span class="category-link">
+                            Explore Collection
+                            <span>→</span>
+                        </span>
+
+                        <span
+                            class="category-count"
+                            data-category-count="tops"
+                        >
+                            0 Pieces
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- Bottoms -->
+                <a
+                    href="shop.html?category=bottoms"
+                    class="category-card"
+                    data-category-filter="bottoms"
+                >
+
+                    <div class="category-image">
+                        <img
+                            src="https://images.openai.com/static-rsc-4/Lq-DtuXeLwcTTvwNpqabetZP8BpV5lTv-VOv8IWSbV1Xlu5xgaMiXrhJMTO5GuvhBwro3mc2Ro-tow20ALaBolF9Kngf7OOm2whypgBq-MRFKv7J0ICTwU5Lw-OhTNjz_GJNrL-y-o9tCsGh8V8cHsq0xhS3gEl6Cmn3-ZBkI3shpJ3omQi2qlmm61S_3ASF?purpose=fullsize"
+                            alt="Bottoms collection"
+                        >
+                    </div>
+
+                    <div class="category-overlay"></div>
+
+                    <div class="category-content">
+
+                        <span class="category-number">03</span>
+
+                        <h3>Bottoms</h3>
+
+                        <p>
+                            Tailored shapes and effortless comfort
+                        </p>
+
+                        <span class="category-link">
+                            Explore Collection
+                            <span>→</span>
+                        </span>
+
+                        <span
+                            class="category-count"
+                            data-category-count="bottoms"
+                        >
+                            0 Pieces
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+            
+             <!-- Jackets & Coats -->
+<a
+    href="shop.html?category=jackets-coats"
+    class="category-card"
+    data-category-filter="jackets-coats"
+>
+
+    <div class="category-image">
+        <img
+            src="https://cdn.mos.cms.futurecdn.net/W4bqiJAoJtfmmtXPxfqPzc.jpeg"
+            alt="Women's Jackets and Coats collection"
+        >
+    </div>
+
+    <div class="category-overlay"></div>
+
+    <div class="category-content">
+
+        <span class="category-number">04</span>
+
+        <h3>Jackets &amp; Coats</h3>
+
+        <p>
+            Statement layers for elevated dressing
+        </p>
+
+        <span class="category-link">
+            Explore Collection
+            <span>→</span>
+        </span>
+
+        <span
+            class="category-count"
+            data-category-count="jackets-coats"
+        >
+            0 Pieces
+        </span>
+
+    </div>
+
+</a>
+         
+         <!-- Co-ord Sets -->
+<a
+    href="shop.html?category=co-ord-sets"
+    class="category-card category-card-wide"
+    data-category-filter="co-ord-sets"
+>
+    <div class="category-image">
+        <img
+            src="https://pankh.com/cdn/shop/files/DSC_7954.jpg?v=1747333987&width=1100"
+            alt="Women's Co-ord Sets collection"
+        >
+    </div>
+
+    <div class="category-overlay"></div>
+
+    <div class="category-content">
+        <span class="category-number">05</span>
+        <h3>Co-ord Sets</h3>
+        <p>Coordinated outfits for effortless modern style</p>
+
+        <span class="category-link">
+            Explore Collection
+            <span>→</span>
+        </span>
+
+        <span
+            class="category-count"
+            data-category-count="co-ord-sets"
+        >
+            0 Pieces
+        </span>
+    </div>
+</a>
+
+</div>
+</section>
+
+
+
+        <!-- ================= SALE BANNER ================= -->
+        <section class="category-sale">
+
+            <div class="category-sale-content">
+
+                <p class="section-eyebrow">LIMITED EDITION</p>
+
+                <h2>The Art of Dressing Well</h2>
+
+                <p>
+                    Explore selected pieces from the LUMIÈRE collection
+                    and discover timeless style made for you.
+                </p>
+
+                <a href="shop.html" class="luxury-button">
+                    Shop All Collections
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    LUMIÈRE
+                </a>
+
+                <p>
+                    Timeless fashion for the modern woman.
+                    Designed with elegance, confidence and individuality.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Shop</h4>
+
+                <a href="shop.html">All Products</a>
+                <a href="shop.html?category=dresses">Dresses</a>
+                <a href="shop.html?category=tops">Tops</a>
+                <a href="shop.html?category=bottoms">Bottoms</a>
+                <a href="shop.html?category=outerwear">Outerwear</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>About</h4>
+
+                <a href="about.html">Our Story</a>
+                <a href="categories.html">Categories</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Customer Care</h4>
+
+                <a href="contact.html">Contact Us</a>
+                <a href="cart.html">Shopping Bag</a>
+                <a href="wishlist.html">Wishlist</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 LUMIÈRE. All rights reserved.
+            </p>
+
+            <p>
+                Designed with elegance.
+            </p>
+
+        </div>
+
+    </footer>
+    
+
+   <!-- ================= BACK TO TOP ================= -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        ↑
+    </button>
+
+
+
+    <!-- MAIN JS -->
+    <script src="script.js"></script>
+
+    <!-- CATEGORIES JS -->
+    <script src="categories.js"></script>
+
+</body>
+</html>

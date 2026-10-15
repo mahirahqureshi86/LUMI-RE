@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<meta name="description"
+    content="LUMIÈRE — Discover modern women's fashion, elegant dresses, tops, jeans, co-ords and more.">
+
+<title>LUMIÈRE | Women's Fashion</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+    <div class="announcement-track">
+        <span>
+            <i class="fa-solid fa-truck-fast"></i>
+            FREE SHIPPING ON ORDERS OVER ₹999
+        </span>
+
+        <span>
+            <i class="fa-solid fa-tag"></i>
+            UP TO 50% OFF ON SELECTED STYLES
+        </span>
+
+        <span>
+            <i class="fa-solid fa-rotate-left"></i>
+            EASY 7-DAY RETURNS
+        </span>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+    <div class="header-container">
+
+        <button class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <a href="index.html" class="logo">
+            <span class="logo-main">LUMIÈRE</span>
+            <span class="logo-sub">WOMEN'S FASHION</span>
+        </a>
+
+        <nav class="main-navigation" id="mainNavigation">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="shop.html" class="nav-link">Shop</a>
+            <a href="categories.html" class="nav-link">Collections</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <button class="header-icon-btn"
+                id="searchToggle"
+                aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <a href="#"
+                class="header-icon-btn account-link"
+                aria-label="Account">
+                <i class="fa-regular fa-user"></i>
+            </a>
+
+            <a href="wishlist.html"
+                class="header-icon-btn header-badge-wrapper"
+                aria-label="Wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+                <span class="header-badge wishlist-count">0</span>
+            </a>
+
+            <!-- FIXED CART LINK -->
+            <a href="cart.html"
+                class="header-icon-btn header-badge-wrapper"
+                aria-label="Shopping cart">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="header-badge cart-count">0</span>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-panel" id="searchPanel">
+        <div class="search-panel-inner">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="search"
+                id="globalSearch"
+                placeholder="Search dresses, tops, jeans, co-ords..."
+                autocomplete="off">
+
+            <button id="closeSearch" aria-label="Close search">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="search-suggestions" id="searchSuggestions"></div>
+    </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+<aside class="mobile-navigation" id="mobileNavigation">
+
+    <div class="mobile-nav-header">
+        <span class="mobile-nav-title">MENU</span>
+
+        <button id="closeMobileMenu" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <nav class="mobile-nav-links">
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+        <a href="shop.html">
+            <i class="fa-solid fa-store"></i>
+            Shop
+        </a>
+
+        <a href="categories.html">
+            <i class="fa-solid fa-layer-group"></i>
+            Collections
+        </a>
+
+        <a href="wishlist.html">
+            <i class="fa-regular fa-heart"></i>
+            Wishlist
+        </a>
+
+        <a href="cart.html">
+            <i class="fa-solid fa-bag-shopping"></i>
+            Cart
+        </a>
+
+        <a href="about.html">
+            <i class="fa-regular fa-circle-user"></i>
+            About Us
+        </a>
+
+        <a href="contact.html">
+            <i class="fa-regular fa-envelope"></i>
+            Contact
+        </a>
+    </nav>
+
+    <div class="mobile-nav-footer">
+        <p>Follow LUMIÈRE</p>
+
+        <div class="social-links">
+            <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Pinterest">
+                <i class="fa-brands fa-pinterest-p"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+        </div>
+    </div>
+
+</aside>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero-section">
+
+        <div class="hero-background">
+            <img
+                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=2200&q=85"
+                alt="Women's fashion collection">
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="hero-eyebrow">
+                THE NEW SEASON
+            </span>
+
+            <h1>
+                Dress Your
+                <span>Moment.</span>
+            </h1>
+
+            <p>
+                Effortless silhouettes, timeless details
+                and styles designed for every version of you.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="shop.html" class="btn btn-primary">
+                    Shop New Arrivals
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="categories.html"
+                    class="btn btn-outline-light">
+                    Explore Collections
+                </a>
+
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <span>SCROLL TO EXPLORE</span>
+            <i class="fa-solid fa-arrow-down"></i>
+        </div>
+
+    </section>
+
+    <!-- FEATURES -->
+    <section class="feature-strip">
+
+        <div class="feature-item">
+            <div class="feature-icon">
+                <i class="fa-solid fa-truck-fast"></i>
+            </div>
+
+            <div>
+                <strong>Free Shipping</strong>
+                <span>On orders over ₹999</span>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <div class="feature-icon">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+            </div>
+
+            <div>
+                <strong>Easy Returns</strong>
+                <span>7-day return policy</span>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <div class="feature-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div>
+                <strong>Secure Payment</strong>
+                <span>100% secure checkout</span>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <div class="feature-icon">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+
+            <div>
+                <strong>Need Help?</strong>
+                <span>We're here for you</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories-section section-padding">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-eyebrow">
+                    SHOP YOUR STYLE
+                </span>
+
+                <h2>Explore Collections</h2>
+            </div>
+
+            <a href="categories.html" class="text-link">
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+        <div class="category-grid">
+
+            <a href="shop.html?category=dresses"
+                class="category-card category-card-large">
+
+                <div class="category-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1000&q=85"
+                        alt="Dresses">
+                </div>
+
+                <div class="category-content">
+                    <span>01</span>
+                    <h3>Dresses</h3>
+                    <p>Elegant & effortless</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+            </a>
+
+            <a href="shop.html?category=tops"
+                class="category-card">
+
+                <div class="category-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1605763240000-7e93b172d754?auto=format&fit=crop&w=900&q=85"
+                        alt="Women's tops">
+                </div>
+
+                <div class="category-content">
+                    <span>02</span>
+                    <h3>Tops</h3>
+                    <p>Everyday essentials</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+            </a>
+
+            <a href="shop.html?category=jeans"
+                class="category-card">
+
+                <div class="category-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=85"
+                        alt="Women's jeans">
+                </div>
+
+                <div class="category-content">
+                    <span>03</span>
+                    <h3>Denim</h3>
+                    <p>Made for every day</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+            </a>
+
+            <a href="shop.html?category=co-ords"
+                class="category-card">
+
+                <div class="category-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=85"
+                        alt="Co-ord sets">
+                </div>
+
+                <div class="category-content">
+                    <span>04</span>
+                    <h3>Co-ords</h3>
+                    <p>Perfectly paired</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+            </a>
+
+        </div>
+    </section>
+
+    <!-- NEW ARRIVALS -->
+    <section class="products-section section-padding">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-eyebrow">JUST IN</span>
+
+                <h2>New Arrivals</h2>
+
+                <p class="section-description">
+                    Fresh styles you'll want to wear on repeat.
+                </p>
+            </div>
+
+            <a href="shop.html?sort=newest"
+                class="text-link">
+                Shop All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+        <div class="product-grid" id="homeNewArrivals"></div>
+
+    </section>
+
+    <!-- EDITORIAL -->
+    <section class="editorial-section">
+
+        <div class="editorial-image">
+            <img
+                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=2000&q=85"
+                alt="LUMIÈRE fashion editorial">
+        </div>
+
+        <div class="editorial-overlay"></div>
+
+        <div class="editorial-content">
+
+            <span class="section-eyebrow">
+                LUMIÈRE EDIT
+            </span>
+
+            <h2>
+                Made for <em>your</em> story.
+            </h2>
+
+            <p>
+                From morning coffee runs to late-night plans,
+                discover pieces that move with you.
+            </p>
+
+            <a href="shop.html" class="btn btn-light">
+                Discover The Edit
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- TRENDING -->
+    <section class="products-section section-padding">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-eyebrow">
+                    MOST LOVED
+                </span>
+
+                <h2>Trending Now</h2>
+
+                <p class="section-description">
+                    Styles everyone is talking about.
+                </p>
+            </div>
+
+            <a href="shop.html?sort=trending"
+                class="text-link">
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+        <div class="product-grid" id="homeTrending"></div>
+
+    </section>
+
+    <!-- PROMO -->
+    <section class="promo-section section-padding">
+
+        <div class="promo-container">
+
+            <div class="promo-content">
+
+                <span class="section-eyebrow">
+                    WEEKEND EDIT
+                </span>
+
+                <h2>
+                    Your wardrobe deserves a little
+                    <em>something new.</em>
+                </h2>
+
+                <p>
+                    Get up to 40% off selected styles.
+                    Limited time only.
+                </p>
+
+                <a href="shop.html?discount=sale"
+                    class="btn btn-dark">
+                    Shop The Sale
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+            <div class="promo-image">
+                <img
+                    src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85"
+                    alt="Women's fashion sale">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SOCIAL -->
+    <section class="social-section section-padding">
+
+        <div class="section-heading centered">
+
+            <div>
+                <span class="section-eyebrow">
+                    FOLLOW ALONG
+                </span>
+
+                <h2>@lumierefashion</h2>
+
+                <p class="section-description">
+                    Style inspiration, new drops & everyday moments.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="social-grid">
+
+            <a href="#" class="social-image">
+                <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=800&q=85"
+                    alt="Fashion inspiration">
+                <div class="social-hover">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </a>
+
+            <a href="#" class="social-image">
+                <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=800&q=85"
+                    alt="Fashion clothing">
+                <div class="social-hover">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </a>
+
+            <a href="#" class="social-image">
+                <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=800&q=85"
+                    alt="Fashion style">
+                <div class="social-hover">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </a>
+
+            <a href="#" class="social-image">
+                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=85"
+                    alt="Women's outfit">
+                <div class="social-hover">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </a>
+
+            <a href="#" class="social-image">
+                <img src="https://images.unsplash.com/photo-1496217590455-aa63a8350eea?auto=format&fit=crop&w=800&q=85"
+                    alt="Women's fashion look">
+                <div class="social-hover">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </a>
+
+            <a href="#" class="social-image">
+                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=85"
+                    alt="Fashion outfit">
+                <div class="social-hover">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+
+        <div class="newsletter-container">
+
+            <div class="newsletter-text">
+
+                <span class="section-eyebrow">
+                    STAY IN THE LOOP
+                </span>
+
+                <h2>A little style in your inbox.</h2>
+
+                <p>
+                    Be the first to know about new arrivals,
+                    exclusive offers and style inspiration.
+                </p>
+
+            </div>
+
+            <form class="newsletter-form"
+                id="newsletterForm">
+
+                <div class="newsletter-input">
+
+                    <input
+                        type="email"
+                        id="newsletterEmail"
+                        placeholder="Your email address"
+                        required>
+
+                    <button type="submit"
+                        aria-label="Subscribe">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+                <small>
+                    By subscribing, you agree to receive
+                    emails from LUMIÈRE.
+                </small>
+
+            </form>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="logo footer-logo">
+                <span class="logo-main">LUMIÈRE</span>
+                <span class="logo-sub">WOMEN'S FASHION</span>
+            </a>
+
+            <p>
+                Modern fashion for every version of you.
+                Discover pieces designed to make you
+                feel confident, comfortable and completely you.
+            </p>
+
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="Pinterest">
+                    <i class="fa-brands fa-pinterest-p"></i>
+                </a>
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="Youtube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-column">
+            <h3>Shop</h3>
+
+            <a href="shop.html">All Products</a>
+            <a href="shop.html?sort=newest">New Arrivals</a>
+            <a href="shop.html?category=dresses">Dresses</a>
+            <a href="shop.html?category=tops">Tops</a>
+            <a href="shop.html?category=jeans">Denim</a>
+            <a href="shop.html?discount=sale">Sale</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Help</h3>
+
+            <a href="contact.html">Contact Us</a>
+            <a href="contact.html#faq">FAQs</a>
+            <a href="#">Shipping & Delivery</a>
+            <a href="#">Returns & Exchanges</a>
+            <a href="#">Size Guide</a>
+            <a href="#">Track Order</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>About</h3>
+
+            <a href="about.html">Our Story</a>
+            <a href="about.html#sustainability">Sustainability</a>
+            <a href="about.html#journal">Journal</a>
+            <a href="#">Careers</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 LUMIÈRE. All rights reserved.
+        </p>
+
+        <div class="payment-icons">
+            <span>VISA</span>
+            <span>Mastercard</span>
+            <span>UPI</span>
+            <span>RuPay</span>
+        </div>
+
+    </div>
+
+</footer>
+
+<button
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<div class="toast-container" id="toastContainer"></div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

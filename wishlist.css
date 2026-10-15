@@ -1,0 +1,767 @@
+/* =========================================================
+   LUMIÈRE - WISHLIST PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+    --wishlist-black: #171717;
+    --wishlist-dark: #242424;
+    --wishlist-cream: #f8f5ef;
+    --wishlist-beige: #eee8dd;
+    --wishlist-white: #ffffff;
+    --wishlist-gray: #77736d;
+    --wishlist-light-gray: #aaa59d;
+    --wishlist-border: #ded9d0;
+    --wishlist-gold: #b89a68;
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.wishlist-page {
+    background: #ffffff;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.wishlist-hero {
+    min-height: 470px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(22, 22, 22, 0.48),
+            rgba(22, 22, 22, 0.48)
+        ),
+        url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=90")
+        center center / cover no-repeat;
+}
+
+.wishlist-hero-content {
+    max-width: 760px;
+
+    padding: 60px 25px;
+
+    color: #ffffff;
+}
+
+.wishlist-eyebrow {
+    margin: 0 0 17px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.wishlist-hero h1 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(60px, 8vw, 95px);
+    line-height: 0.95;
+    font-weight: 500;
+}
+
+.wishlist-hero-content > p:last-child {
+    max-width: 580px;
+
+    margin: 25px auto 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 1.9;
+    font-weight: 300;
+}
+
+
+/* =========================================================
+   WISHLIST SECTION
+   ========================================================= */
+
+.wishlist-section {
+    padding: 95px 0 115px;
+}
+
+.wishlist-container {
+    width: min(1350px, calc(100% - 60px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   WISHLIST HEADING
+   ========================================================= */
+
+.wishlist-heading-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 45px;
+
+    border-bottom: 1px solid var(--wishlist-border);
+
+    padding-bottom: 25px;
+}
+
+.section-eyebrow {
+    margin: 0 0 10px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    color: var(--wishlist-gold);
+}
+
+.wishlist-heading-row h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 47px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.wishlist-item-count {
+    padding-bottom: 4px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: var(--wishlist-gray);
+}
+
+
+/* =========================================================
+   WISHLIST GRID
+   ========================================================= */
+
+.wishlist-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+/*
+   The existing script.js creates product cards
+   with the class .product-card.
+*/
+
+.wishlist-grid .product-card {
+    position: relative;
+}
+
+
+/* =========================================================
+   PRODUCT CARD IMAGE
+   ========================================================= */
+
+.wishlist-grid .product-image {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--wishlist-cream);
+}
+
+.wishlist-grid .product-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.8s
+        cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.wishlist-grid .product-card:hover
+.product-image img {
+    transform: scale(1.045);
+}
+
+
+/* =========================================================
+   PRODUCT CARD CONTENT
+   ========================================================= */
+
+.wishlist-grid .product-info {
+    padding: 17px 2px 10px;
+}
+
+.wishlist-grid .product-name {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.1;
+
+    color: var(--wishlist-black);
+}
+
+.wishlist-grid .product-category {
+    margin: 6px 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: var(--wishlist-gray);
+}
+
+.wishlist-grid .product-price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 7px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+
+    color: var(--wishlist-black);
+}
+
+
+/* =========================================================
+   WISHLIST BUTTON
+   ========================================================= */
+
+.wishlist-grid [data-wishlist] {
+    position: absolute;
+
+    top: 13px;
+    right: 13px;
+
+    z-index: 5;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.wishlist-grid [data-wishlist]:hover {
+    transform: scale(1.08);
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   QUICK ADD
+   ========================================================= */
+
+.wishlist-grid [data-quick-add] {
+    width: 100%;
+
+    min-height: 43px;
+
+    margin-top: 12px;
+
+    border: 1px solid var(--wishlist-black);
+
+    background: transparent;
+
+    color: var(--wishlist-black);
+
+    cursor: pointer;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.wishlist-grid [data-quick-add]:hover {
+    background: var(--wishlist-black);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   EMPTY WISHLIST
+   ========================================================= */
+
+.wishlist-empty {
+    display: none;
+
+    max-width: 650px;
+
+    margin: 50px auto 0;
+
+    padding: 80px 30px;
+
+    text-align: center;
+
+    background: var(--wishlist-cream);
+}
+
+.empty-heart {
+    width: 62px;
+    height: 62px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--wishlist-border);
+
+    border-radius: 50%;
+}
+
+.empty-heart svg {
+    width: 25px;
+    height: 25px;
+
+    fill: none;
+
+    stroke: var(--wishlist-gold);
+    stroke-width: 1.2;
+}
+
+.empty-eyebrow {
+    margin: 0 0 13px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    color: var(--wishlist-gold);
+}
+
+.wishlist-empty h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 43px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.wishlist-empty > p:not(.empty-eyebrow) {
+    max-width: 430px;
+
+    margin: 18px auto 27px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    line-height: 1.8;
+    font-weight: 300;
+
+    color: var(--wishlist-gray);
+}
+
+
+/* =========================================================
+   SHOP BUTTON
+   ========================================================= */
+
+.wishlist-shop-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+
+    padding: 14px 28px;
+
+    background: var(--wishlist-black);
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.wishlist-shop-button:hover {
+    background: #363636;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   BOTTOM BANNER
+   ========================================================= */
+
+.wishlist-banner {
+    min-height: 410px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 75px 25px;
+
+    background: var(--wishlist-cream);
+}
+
+.wishlist-banner-content {
+    max-width: 700px;
+}
+
+.wishlist-banner h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(45px, 6vw, 70px);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.wishlist-banner-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 28px;
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid var(--wishlist-black);
+
+    color: var(--wishlist-black);
+
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    transition: gap 0.3s ease;
+}
+
+.wishlist-banner-link:hover {
+    gap: 22px;
+}
+
+.wishlist-banner-link span {
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    background: #171717;
+    color: #ffffff;
+}
+
+.footer-main {
+    width: min(1250px, calc(100% - 70px));
+    margin: auto;
+
+    padding: 80px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap: 60px;
+}
+
+.footer-brand {
+    max-width: 330px;
+}
+
+.footer-logo {
+    display: inline-block;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 42px;
+
+    letter-spacing: 2px;
+}
+
+.footer-brand p {
+    margin-top: 20px;
+
+    color: #aaa49c;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    line-height: 1.9;
+    font-weight: 300;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.footer-column h4 {
+    margin: 0 0 10px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.footer-column a {
+    color: #aaa49c;
+
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+
+    transition: color 0.25s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    width: min(1250px, calc(100% - 70px));
+    margin: auto;
+
+    padding: 22px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #77736d;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .wishlist-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 22px;
+    }
+
+    .footer-main {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .wishlist-hero {
+        min-height: 400px;
+    }
+
+    .wishlist-hero h1 {
+        font-size: 58px;
+    }
+
+    .wishlist-section {
+        padding: 65px 0 80px;
+    }
+
+    .wishlist-container {
+        width: calc(100% - 30px);
+    }
+
+    .wishlist-heading-row {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 12px;
+
+        margin-bottom: 30px;
+    }
+
+    .wishlist-heading-row h2 {
+        font-size: 42px;
+    }
+
+    .wishlist-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 22px 13px;
+    }
+
+    .wishlist-grid .product-name {
+        font-size: 19px;
+    }
+
+    .wishlist-grid .product-category {
+        font-size: 7px;
+    }
+
+    .wishlist-grid [data-wishlist] {
+        width: 34px;
+        height: 34px;
+
+        top: 9px;
+        right: 9px;
+    }
+
+    .wishlist-empty {
+        padding: 65px 20px;
+    }
+
+    .wishlist-empty h2 {
+        font-size: 39px;
+    }
+
+    .wishlist-banner {
+        min-height: 350px;
+    }
+
+    .wishlist-banner h2 {
+        font-size: 48px;
+    }
+
+    .footer-main {
+        width: calc(100% - 40px);
+
+        padding: 60px 0;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 40px 25px;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+    }
+
+    .footer-bottom {
+        width: calc(100% - 40px);
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    .wishlist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wishlist-hero h1 {
+        font-size: 51px;
+    }
+
+    .wishlist-heading-row h2 {
+        font-size: 38px;
+    }
+
+}
